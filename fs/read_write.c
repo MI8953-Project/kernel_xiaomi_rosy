@@ -4,7 +4,7 @@
  *  Copyright (C) 1991, 1992  Linus Torvalds
  */
 
-#include <linux/slab.h> 
+#include <linux/slab.h>
 #include <linux/stat.h>
 #include <linux/fcntl.h>
 #include <linux/file.h>
@@ -468,10 +468,10 @@ ssize_t vfs_read(struct file *file, char __user *buf, size_t count, loff_t *pos)
 {
 	ssize_t ret;
 
-#ifdef CONFIG_KSU
-    if (get_ksu_state() > 0)
-        ksu_handle_vfs_read(&file, &buf, &count, &pos);
-#endif
+	#ifdef CONFIG_KSU
+	if (get_ksu_state() > 0)
+		ksu_handle_vfs_read(&file, &buf, &count, &pos);
+	#endif
 
 	if (!(file->f_mode & FMODE_READ))
 		return -EBADF;
