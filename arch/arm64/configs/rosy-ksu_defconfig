@@ -708,18 +708,6 @@ CONFIG_QMI_ENCDEC=y
 #
 CONFIG_WIREGUARD=y
 #
-deletions.
-  36 changes: 36 additions & 0 deletions36  
-arch/arm64/configs/rosy-atiga_defconfig
-@@ -703,8 +703,44 @@ CONFIG_CRYPTO_AES_ARM64_CE_BLK=y
-CONFIG_CRYPTO_AES_ARM64_NEON_BLK=y
-CONFIG_CRYPTO_CRC32_ARM64=y
-CONFIG_QMI_ENCDEC=y
-#
-# Wireguard
-#
-CONFIG_WIREGUARD=y
-#
 # TCP Congestion
 #
 CONFIG_TCP_CONG_ADVANCED=y
